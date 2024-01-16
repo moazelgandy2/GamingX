@@ -10,7 +10,7 @@ export class UI {
                 <img
                   src="${game.thumbnail}"
                   alt="${game.title}"
-                  class="card-img-top"
+                  class="card-img-top" loading="lazy"
                 />
                 <div class="card-body d-flex flex-column justify-content-center ">
                   <h5 class="card-title text-white">${game.title}</h5>
@@ -53,7 +53,7 @@ export class UI {
                 <img
                   src="${game.thumbnail}"
                   alt="${game.title}"
-                  class="w-90 rounded-2"
+                  class="w-90 rounded-2" loading="lazy"
                 />
               </div>
               <div class="col-md-6 col-lg-5 col-sm-12 col-12 gameText">

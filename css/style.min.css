@@ -1,9 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+.group,
+.hide-button,
+a,
+a i,
+i {
+  cursor: pointer;
+}
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   box-sizing: border-box;
-  outline: none;
+  outline: 0;
   scroll-behavior: smooth;
 }
 body {
@@ -23,45 +29,49 @@ body {
   background-color: #27273f;
 }
 .main {
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 2/2/3/3;
   background-color: #202136;
 }
-.top-bar {
-  grid-area: 1 / 2 / 2 / 3;
+.top-bar,
+aside {
   background-color: #27273f;
+}
+.top-bar {
+  grid-area: 1/2/2/3;
   position: fixed;
   width: calc(100% - 70px);
   height: 50px;
   right: 0;
   z-index: 1;
 }
-
+.logo,
 aside {
-  grid-area: 2 / 1 / 3 / 2;
-  min-height: calc(100vh - 50px);
-  background-color: #27273f;
-  color: white;
-  position: fixed;
   width: 70px;
+  position: fixed;
+}
+aside {
+  grid-area: 2/1/3/2;
+  min-height: calc(100vh - 50px);
+  color: #fff;
 }
 .logo {
-  grid-area: 1 / 1 / 2 / 2;
-  position: fixed;
-  width: 70px;
+  grid-area: 1/1/2/2;
   height: 50px;
   text-align: center;
   border-top-left-radius: 15px;
   background-color: #00bbfe;
 }
+.search,
+.select {
+  border: 0;
+  color: #fff;
+}
 .filters-bar {
   background-color: #27273f;
   top: 60px;
-  /* z-index: 100; */
 }
 .select {
   background-color: #2c2c44;
-  color: white;
-  border: 0;
   width: 33%;
 }
 .card {
@@ -73,23 +83,15 @@ aside {
 }
 .search {
   background-color: #2c2c44;
-  border: 0;
   border-radius: 5px;
-  color: white;
   padding: 6px;
 }
 .avatar {
   width: 40px;
   height: 40px;
 }
-.hide-button {
-  cursor: pointer;
-}
 .group .icon {
   color: #0d6efd;
-}
-.group {
-  cursor: pointer;
 }
 .group:hover .icon,
 .group:hover i,
@@ -103,22 +105,13 @@ aside {
   border-radius: 8px;
 }
 a {
-  cursor: pointer;
   color: inherit;
   text-decoration: inherit;
   cursor: inherit;
 }
-
-a i {
-  cursor: pointer;
-}
-i {
-  cursor: pointer;
-}
 .badge {
   font-size: 10px;
 }
-
 .gameDetails {
   text-align: center;
   border-radius: 20px;
@@ -130,46 +123,30 @@ i {
   right: 10px;
   left: 80px;
 }
-
-/* FILEPATH: /e:/Route/GamingX/css/style.css */
-
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: #2c2c44;
   border-radius: 4px;
   height: 80px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
-
 ::-webkit-scrollbar-track {
   background-color: #202136;
   border-radius: 4px;
 }
-
 @media screen and (max-width: 580px) and (min-width: 0px) {
+  .hide-btn,
+  .show-btn,
   .top-bar .row .col-lg-8 {
     display: none !important;
   }
-  /* .show-btn-sm {
-    display: inline;
-  } */
-  .show-btn {
-    display: none !important;
-  }
-  .hide-btn {
-    display: none !important;
-  }
 }
-/* Loader */
 .loaders {
   position: absolute;
   inset: 0;
-  min-height: 20000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,8 +161,9 @@ i {
   width: 44px;
   height: 44px;
   position: relative;
+  display: inline-block;
+  margin: 0 16px;
 }
-
 .loader:before {
   content: "";
   width: 6px;
@@ -199,134 +177,104 @@ i {
   transform: translate(-18px, -18px);
   animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
-
 .loader svg {
   display: block;
   width: 100%;
   height: 100%;
 }
-
-.loader svg rect,
+.loader svg circle,
 .loader svg polygon,
-.loader svg circle {
+.loader svg rect {
   fill: none;
   stroke: var(--path);
   stroke-width: 10px;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
-
 .loader svg polygon {
   stroke-dasharray: 145 76 145 76;
   stroke-dashoffset: 0;
   animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
-
 .loader svg rect {
   stroke-dasharray: 192 64 192 64;
   stroke-dashoffset: 0;
-  animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite pathRect;
 }
-
 .loader svg circle {
   stroke-dasharray: 150 50 150 50;
   stroke-dashoffset: 75;
   animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
-
 .loader.triangle {
   width: 48px;
 }
-
 .loader.triangle:before {
   left: 21px;
   transform: translate(-10px, -18px);
   animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
-
 @keyframes pathTriangle {
   33% {
     stroke-dashoffset: 74;
   }
-
   66% {
     stroke-dashoffset: 147;
   }
-
   100% {
     stroke-dashoffset: 221;
   }
 }
-
 @keyframes dotTriangle {
   33% {
     transform: translate(0, 0);
   }
-
   66% {
     transform: translate(10px, -18px);
   }
-
   100% {
     transform: translate(-10px, -18px);
   }
 }
-
 @keyframes pathRect {
   25% {
     stroke-dashoffset: 64;
   }
-
   50% {
     stroke-dashoffset: 128;
   }
-
   75% {
     stroke-dashoffset: 192;
   }
-
   100% {
     stroke-dashoffset: 256;
   }
 }
-
 @keyframes dotRect {
   25% {
     transform: translate(0, 0);
   }
-
   50% {
     transform: translate(18px, -18px);
   }
-
   75% {
     transform: translate(0, -36px);
   }
-
   100% {
     transform: translate(-18px, -18px);
   }
 }
-
 @keyframes pathCircle {
   25% {
     stroke-dashoffset: 125;
   }
-
   50% {
     stroke-dashoffset: 175;
   }
-
   75% {
     stroke-dashoffset: 225;
   }
-
   100% {
     stroke-dashoffset: 275;
   }
-}
-
-.loader {
-  display: inline-block;
-  margin: 0 16px;
 }
