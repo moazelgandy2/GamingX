@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>GamingX</title>
+  </head>
+  <body class="bg-main">
+    <div class="content">
+      <div class="top-bar text-center d-flex align-items-center justify-content-center">
+        <div class="row w-100 justify-content-end">
+          <div class="col-lg-8 col-md-8 col-6 d-flex justify-content-evenly nav d-none">
+            <div class="group text-white d-flex justify-content-between align-items-center">
+              <i class="me-1">Favorits</i>
+              <i class="fa-solid fa-heart text-primary"> </i>
+            </div>
+            <div class="group text-white d-flex justify-content-between align-items-center">
+              <i class="me-1">Wishlist</i>
+              <i class="fa-solid fa-bookmark text-primary"></i>
+            </div>
+            <div class="group d-flex justify-content-between align-items-center">
+              <i class="text-white me-1">Friends</i>
+              <i class="fa-solid fa-user-group text-primary"></i>
+            </div>
+          </div>
+          <div
+            class="nav-down position-fixed text-white bg-main-light z-2 d-flex flex-column justify-content-between align-items-center mx-auto d-none"
+          >
+            <div class="group">
+              <i class="me-1">Favorits</i>
+              <i class="fa-solid fa-heart text-primary"> </i>
+            </div>
+            <div class="group">
+              <i class="me-1">Friends</i>
+              <i class="fa-solid fa-user-group text-primary"> </i>
+            </div>
+            <div class="group">
+              <i class="me-1">Wishlist</i>
+              <i class="fa-solid fa-bookmark text-primary"> </i>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-6 col-sm-3 h-100 overflow-hidden rounded-4">
+            <i class="hide-btn fa-solid fa-arrow-right text-primary me-3 d-none"></i>
+            <i class="show-btn-sm fa-solid fa-arrow-down text-primary me-3 d-none"></i>
+            <i class="hide-btn-sm fa-solid fa-arrow-up text-primary me-3 d-none"></i>
+            <i class="show-btn fa-solid fa-arrow-left text-primary me-3"></i>
+            <img src="./imgs/avatar.jpg" class="avatar rounded-3" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <aside class="d-flex flex-column justify-content-evenly align-items-center h-100">
+        <a href="/">
+          <i class="fa-solid fa-house"></i>
+        </a>
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid fa-circle-info"></i>
+        <a href="https://github.com/moazelgandy2" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/moazelgnayd2" target="_blank">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </aside>
+      <div class="logo d-flex justify-content-center align-items-center">
+        <h3 class="text-white">GX</h3>
+      </div>
+      <div class="container main mt-2 text-white pt-3">
+        <div class="row position-relative">
+          <div
+            class="filters-bar p-3 rounded-2 d-flex justify-content-evenly gap-4 col-lg-9 mx-auto col-md-9 col-sm-8 col-10"
+          >
+            <select name="ctaegories" id="categ" class="select">
+              <option value="none" selected disabled hidden>Genre</option>
+              <option value="mmorpg">MMORPG</option>
+              <option value="shooter">Shooter</option>
+              <option value="sailing">Sailing</option>
+              <option value="permadeath">Permadeath</option>
+              <option value="superhero">Superhero</option>
+              <option value="pixel">Pixels</option>
+            </select>
+          </div>
+        </div>
+        <div class="gameDetailsCard position-relative"></div>
+
+        <div class="row mt-5">
+          <h2 class="games-title">
+            All games <sub class="fs-6 text-primary games-count">(2012)</sub>
+          </h2>
+          <div class="games row w-100 position-relative"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loaders">
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <circle id="test" cx="40" cy="40" r="32"></circle>
+        </svg>
+      </div>
+
+      <div class="loader triangle">
+        <svg viewBox="0 0 86 80">
+          <polygon points="43 8 79 72 7 72"></polygon>
+        </svg>
+      </div>
+
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <rect x="8" y="8" width="64" height="64"></rect>
+        </svg>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/103db47f5d.js" crossorigin="anonymous"></script>
+    <!-- <script src="./js/ui.js"></script> -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
