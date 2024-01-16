@@ -137,13 +137,7 @@ a {
   background-color: #202136;
   border-radius: 4px;
 }
-@media screen and (max-width: 580px) and (min-width: 0px) {
-  .hide-btn,
-  .show-btn,
-  .top-bar .row .col-lg-8 {
-    display: none !important;
-  }
-}
+
 .loaders {
   position: absolute;
   inset: 0;
@@ -276,5 +270,12 @@ a {
   }
   100% {
     stroke-dashoffset: 275;
+  }
+}
+@media screen and (max-width: 580px) and (min-width: 0px) {
+  .hide-btn,
+  .show-btn,
+  .top-bar .row .col-lg-8 {
+    display: none !important;
   }
 }
