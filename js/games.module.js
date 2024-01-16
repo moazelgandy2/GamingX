@@ -61,7 +61,9 @@ export class Games {
 
   findGame(gameId) {
     let position = { x: scrollX, y: scrollY };
+
     window.scrollTo(0, 0);
+
     document.querySelector(".gameDetailsCard").innerHTML = "";
 
     const URL = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${gameId}`;
@@ -80,6 +82,7 @@ export class Games {
         const closeGameCard = document.querySelector(".closeGame");
         closeGameCard.addEventListener("click", () => {
           document.querySelector(".gameDetails").remove();
+
           scrollTo(position.x, position.y);
         });
       });
