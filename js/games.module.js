@@ -5,7 +5,7 @@ export class Games {
     this.gameType = `All Games`;
     fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", {
       headers: {
-        "X-RapidAPI-Key": "7cc9914c9bmsh398e93645579f2fp140ec1jsn579d3bd12aeb",
+        "X-RapidAPI-Key": "YOUR-API-KEY",
         "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
       },
     })
@@ -39,7 +39,7 @@ export class Games {
     document.querySelector(".loaders").classList.remove("d-none");
     fetch(`${URL}`, {
       headers: {
-        "X-RapidAPI-Key": "7cc9914c9bmsh398e93645579f2fp140ec1jsn579d3bd12aeb",
+        "X-RapidAPI-Key": "YOUR-API-KEY",
         "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
       },
     })
@@ -70,7 +70,7 @@ export class Games {
 
     fetch(`${URL}`, {
       headers: {
-        "X-RapidAPI-Key": "7cc9914c9bmsh398e93645579f2fp140ec1jsn579d3bd12aeb",
+        "X-RapidAPI-Key": "YOUR-API-KEY",
         "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
       },
     })
